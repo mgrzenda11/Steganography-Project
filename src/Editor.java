@@ -31,6 +31,44 @@ public class Editor {
         // graphia.setRGB(int x, int y, 0xRRGGBB);
     }
 
+    public int fade(char c, int lv) {
+        int r = lv >> 16;
+        int g = (lv>>8) - (r<<8);
+        int b = lv - (r<<16) - (g<<8);
+        int off, val = c - 32;
+        if((off = (r+g+b % 191)) == val) return lv;
+
+        int p = off/3;
+        switch(off%3) {
+            case 2:
+                r++;
+                g++;
+            case 1:
+                r++;
+            case 0:
+                r = (r+p)%191;
+                g = (g+p)%191;
+                b = (b+p)%191;
+                break;
+        }
+        return (r<<16 | g<<8 | b);
+    }
+
+    public int fade2(char c, int lv) {
+        int r = lv >> 16;
+        int g = (lv>>8) & 0xff;
+        int b = lv & 0xff;
+        //System.out.println(r + " " + g + " " + b);
+
+        int val1 = c >> 4;
+        int val2 = c - (val1<<4);
+        //System.out.println(val1 + " " + val2);
+        r = (r & 0xf0) | val1;
+        b = (b & 0xf0) | val2;
+
+        return (r<<16 | g<<8 | b);
+    }
+
     public void display(boolean which) {
         BufferedImage pic = which ? graphia : picture;
 
