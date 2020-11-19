@@ -22,6 +22,27 @@ public class Editor {
         WritableRaster raster = picture.copyData(null);
         graphia = new BufferedImage(model, raster, model.isAlphaPremultiplied(), null);
     }
+    
+    public void encryptImage(String message) {
+        //using a list of pixel locations as long as the message the image will be encrypted
+        Random r = new Random();
+        locations = new Coordinate [message.length()];
+        for(int i = 0; i<message.length(); i++) {
+            Coordinate rep = new Coordinate(r.nextInt(width), r.nextInt(height));
+            int newRGB = fade2(message.charAt(i), picture.getRGB(rep.getX(), rep.getY()));
+            graphia.setRGB(rep.getX(), rep.getY(), newRGB);
+            locations[i] = rep;
+        }
+    }
+    
+    public String decryptImage() {
+        String message = "";
+        for(int i = 0; i<locations.length; i++) {
+            char c = unfade(graphia.getRGB(locations[i].getX(), locations[i].getY()));
+            message += c;
+        }
+        return message;
+    }
 
     public void Inject() {
         for(int i = 0; i < width; i++) {
