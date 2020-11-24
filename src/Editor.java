@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.*;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Editor {
@@ -22,38 +23,46 @@ public class Editor {
         WritableRaster raster = picture.copyData(null);
         graphia = new BufferedImage(model, raster, model.isAlphaPremultiplied(), null);
     }
-    
-    public void encryptImage(String message) {
-        //using a list of pixel locations as long as the message the image will be encrypted
-        Random r = new Random();
-        locations = new Coordinate [message.length()];
-        for(int i = 0; i<message.length(); i++) {
-            Coordinate rep = new Coordinate(r.nextInt(width), r.nextInt(height));
-            int newRGB = fade2(message.charAt(i), picture.getRGB(rep.getX(), rep.getY()));
-            graphia.setRGB(rep.getX(), rep.getY(), newRGB);
-            locations[i] = rep;
-        }
-    }
-    
-    public String decryptImage() {
-        String message = "";
-        for(int i = 0; i<locations.length; i++) {
-            char c = unfade(graphia.getRGB(locations[i].getX(), locations[i].getY()));
-            message += c;
-        }
-        return message;
-    }
 
-    public void Inject() {
-        for(int i = 0; i < width; i++) {
-            for(int j = 0, rgb; j < height; j++) {
-                rgb = graphia.getRGB(i,j);
-                graphia.setRGB(i, j,fade((char)0, rgb));
-            }
+    public void Inject(int prime, String message) {
+        int bound = height * width, x = 1, k, i, j;
+        ArrayList<Integer> col = new ArrayList<>();
+
+        for(char c: (message+'\0').toCharArray()) {
+            //System.out.println(c);
+            do {
+                k = (int) (Math.pow(prime * x++, 2)) % bound;
+            } while(col.contains(k));
+            col.add(k);
+            i = k % width;
+            j = k / width;
+            graphia.setRGB(i, j,fade(c, graphia.getRGB(i,j)));
         }
     }
 
-    public int fade(char c, int lv) {
+    public String Exrtact(int key) {
+        int bound = height * width, x = 1, k, i, j;
+        ArrayList<Integer> col = new ArrayList<>();
+        StringBuilder message = new StringBuilder();
+        char c;
+
+        while(x < bound) {
+            do {
+                k = (int) (Math.pow(key * x++, 2)) % bound;
+            } while(col.contains(k));
+            col.add(k);
+            i = k % width;
+            j = k / width;
+            c = fire(graphia.getRGB(i, j));
+
+            if(c != '\0') message.append(c);
+            else break;
+        }
+
+        return message.toString();
+    }
+
+    private int fade(char c, int lv) {
         int r = lv >> 16, g = (lv>>8) & 0xff, b = lv & 0xff;
         int t = ThreadLocalRandom.current().nextInt(0,16);
 
@@ -64,7 +73,7 @@ public class Editor {
         return (r<<16 | g<<8 | b);
     }
 
-    public char fire(int lv) {
+    private char fire(int lv) {
         int r = (lv>>16) & 0x0f, g = 16 - ((lv>>8) & 0x0f), b = lv & 0x0f;
         return (char) (((r+g)%16) << 4 | ((b+g)%16));
     }
@@ -85,6 +94,24 @@ public class Editor {
         jPanel.add(picLabel);
         f.setTitle(name);
         f.setSize(new Dimension(wide + 20,high + 40));
+        f.add(jPanel);
+        f.setVisible(true);
+        f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    }
+
+    public void miniDisplay(String title) {
+        //blow up the image
+        int height = 500;
+        int width = 500;
+
+        Image miniPic = graphia.getScaledInstance(width, height, Image.SCALE_DEFAULT);
+        JLabel picLabel = new JLabel(new ImageIcon(miniPic));
+        JPanel jPanel = new JPanel();
+        JFrame f = new JFrame();
+
+        jPanel.add(picLabel);
+        f.setTitle(title);
+        f.setSize(new Dimension(width + 20,height + 40));
         f.add(jPanel);
         f.setVisible(true);
         f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
