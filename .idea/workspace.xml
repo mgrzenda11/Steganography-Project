@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="fe9d40f9-704f-4670-b14b-7d2e35163b38" name="Default Changelist" comment="wrote the mini class out to generate a &quot;big pixel&quot; image">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Steg/Editor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Steg/Editor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Steg/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Steg/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Steg/Mini.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Steg/Mini.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mini.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +52,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.Mini">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Steg" />
@@ -58,8 +72,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Mini" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Mini" />
       </list>
     </recent_temporary>
   </component>
@@ -89,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605673110287</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="wrote the mini class out to generate a &quot;big pixel&quot; image">
+      <created>1606256434646</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606256434646</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -120,22 +141,26 @@
     <option name="LAST_COMMIT_MESSAGE" value="wrote the mini class out to generate a &quot;big pixel&quot; image" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1320" height="171" key="GridCell.Tab.0.bottom" timestamp="1606186940699">
+    <state width="1320" height="171" key="GridCell.Tab.0.bottom" timestamp="1606261289152">
       <screen x="0" y="27" width="1366" height="673" />
     </state>
-    <state width="1320" height="171" key="GridCell.Tab.0.bottom/0.27.1366.673@0.27.1366.673" timestamp="1606186940699" />
-    <state width="1320" height="171" key="GridCell.Tab.0.center" timestamp="1606186940698">
+    <state width="1320" height="171" key="GridCell.Tab.0.bottom/0.27.1366.673@0.27.1366.673" timestamp="1606261289152" />
+    <state width="1320" height="171" key="GridCell.Tab.0.center" timestamp="1606261289149">
       <screen x="0" y="27" width="1366" height="673" />
     </state>
-    <state width="1320" height="171" key="GridCell.Tab.0.center/0.27.1366.673@0.27.1366.673" timestamp="1606186940698" />
-    <state width="1320" height="171" key="GridCell.Tab.0.left" timestamp="1606186940698">
+    <state width="1320" height="171" key="GridCell.Tab.0.center/0.27.1366.673@0.27.1366.673" timestamp="1606261289149" />
+    <state width="1320" height="171" key="GridCell.Tab.0.left" timestamp="1606261289148">
       <screen x="0" y="27" width="1366" height="673" />
     </state>
-    <state width="1320" height="171" key="GridCell.Tab.0.left/0.27.1366.673@0.27.1366.673" timestamp="1606186940698" />
-    <state width="1320" height="171" key="GridCell.Tab.0.right" timestamp="1606186940699">
+    <state width="1320" height="171" key="GridCell.Tab.0.left/0.27.1366.673@0.27.1366.673" timestamp="1606261289148" />
+    <state width="1320" height="171" key="GridCell.Tab.0.right" timestamp="1606261289151">
       <screen x="0" y="27" width="1366" height="673" />
     </state>
-    <state width="1320" height="171" key="GridCell.Tab.0.right/0.27.1366.673@0.27.1366.673" timestamp="1606186940699" />
+    <state width="1320" height="171" key="GridCell.Tab.0.right/0.27.1366.673@0.27.1366.673" timestamp="1606261289151" />
+    <state x="278" y="99" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606256582988">
+      <screen x="0" y="27" width="1366" height="673" />
+    </state>
+    <state x="278" y="99" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1366.673@0.27.1366.673" timestamp="1606256582988" />
     <state x="0" y="27" width="1356" height="673" key="new project wizard" timestamp="1606256179256">
       <screen x="0" y="27" width="1366" height="673" />
     </state>

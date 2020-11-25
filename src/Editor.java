@@ -22,6 +22,7 @@ public class Editor {
         ColorModel model = picture.getColorModel();
         WritableRaster raster = picture.copyData(null);
         graphia = new BufferedImage(model, raster, model.isAlphaPremultiplied(), null);
+
     }
 
     public void Inject(int prime, String message) {
@@ -37,6 +38,14 @@ public class Editor {
             i = k % width;
             j = k / width;
             graphia.setRGB(i, j,fade(c, graphia.getRGB(i,j)));
+        }
+    }
+
+    public void Inject2(){
+        for(int row = 0; row<width; row++) {
+            for(int col = 0; col<height; col++) {
+                graphia.setRGB(row, col,fade('a', graphia.getRGB(row,col)));
+            }
         }
     }
 
@@ -119,9 +128,9 @@ public class Editor {
 
     public void save() {
         // System.out.println(System.getProperty("user.home"));
-        File output = new File(System.getProperty("user.home") + "/Pictures/graphia.png");
+        File output = new File(System.getProperty("user.home") + "/Pictures/graphia.jpg");
         try {
-            ImageIO.write(graphia, "png", output);
+            ImageIO.write(graphia, "jpg", output);
         } catch(IOException ioe) {
             System.out.println(ioe.getMessage());
         }
