@@ -25,6 +25,56 @@ public class Editor {
 
     }
 
+    public void createMiniImage() {
+        //literally a script to create a 5x5 image of a smile face
+        BufferedImage img = new BufferedImage(5, 5, BufferedImage.TYPE_INT_RGB);
+        //blue = 0x25e6e2
+        //yellow = 0xfff700
+        //brown = 0x634200
+        //dark green = 0x006308
+        //green = 0x1df52f
+        img.setRGB(0, 0, 0x25e6e2);
+        img.setRGB(1, 0, 0x25e6e2);
+        img.setRGB(2, 0, 0xfff700);
+        img.setRGB(3, 0, 0x25e6e2);
+        img.setRGB(4, 0, 0x25e6e2);
+
+        img.setRGB(0, 1, 0x25e6e2);
+        img.setRGB(1, 1, 0xfff700);
+        img.setRGB(2, 1, 0x634200);
+        img.setRGB(3, 1, 0xfff700);
+        img.setRGB(4, 1, 0x25e6e2);
+
+        img.setRGB(0, 2, 0x25e6e2);
+        img.setRGB(1, 2, 0x25e6e2);
+        img.setRGB(2, 2, 0xfff700);
+        img.setRGB(3, 2, 0x25e6e2);
+        img.setRGB(4, 2, 0x25e6e2);
+
+        img.setRGB(0, 3, 0x006308);
+        img.setRGB(1, 3, 0x006308);
+        img.setRGB(2, 3, 0x1df52f);
+        img.setRGB(3, 3, 0x1df52f);
+        img.setRGB(4, 3, 0x006308);
+
+        img.setRGB(0, 4, 0x006308);
+        img.setRGB(1, 4, 0x006308);
+        img.setRGB(2, 4, 0x1df52f);
+        img.setRGB(3, 4, 0x006308);
+        img.setRGB(4, 4, 0x006308);
+
+        miniDisplay("MiniImage", img);
+
+        //saving image
+        File output = new File(System.getProperty("user.home") + "/Pictures/MiniImage.jpg");
+        try {
+            ImageIO.write(img, "jpg", output);
+        } catch(IOException ioe) {
+            System.out.println(ioe.getMessage());
+        }
+
+    }
+
     public void Inject(int prime, String message) {
         int bound = height * width, x = 1, k, i, j;
         ArrayList<Integer> col = new ArrayList<>();
@@ -71,6 +121,12 @@ public class Editor {
         return message.toString();
     }
 
+    /*private void printRGBValues() {
+        for(int row = 0; row<width; row++) {
+            for(int col = 0; col<height)
+        }
+    } */
+
     private int fade(char c, int lv) {
         int r = lv >> 16, g = (lv>>8) & 0xff, b = lv & 0xff;
         int t = ThreadLocalRandom.current().nextInt(0,16);
@@ -108,12 +164,12 @@ public class Editor {
         f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
-    public void miniDisplay(String title) {
+    public void miniDisplay(String title, BufferedImage img) {
         //blow up the image
         int height = 500;
         int width = 500;
 
-        Image miniPic = graphia.getScaledInstance(width, height, Image.SCALE_DEFAULT);
+        Image miniPic = img.getScaledInstance(width, height, Image.SCALE_DEFAULT);
         JLabel picLabel = new JLabel(new ImageIcon(miniPic));
         JPanel jPanel = new JPanel();
         JFrame f = new JFrame();

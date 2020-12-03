@@ -1,9 +1,11 @@
 public class Main {
 
     public static void main(String[] args) {
-        Editor canvas = new Editor("/home/matthew/Pictures/network.jpg"); // insert path to image
+        Editor canvas = new Editor("/home/matthew/Pictures/MiniImage.jpg"); // insert path to image
         //canvas.Inject(41,"Hello World");
-        canvas.Inject2();
+        canvas.Inject(41, "Pickle");
+        System.out.println(canvas.Exrtact(41));
+        canvas.display(true);
         canvas.save();
         //System.out.println(canvas.Exrtact(41));
         //canvas.display(false);
