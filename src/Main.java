@@ -1,9 +1,17 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
         Editor canvas = new Editor("/home/greg/Pictures/05AQNau.jpg"); // insert path to image
-        canvas.Inject(41,"Hello World");
-        System.out.println(canvas.Exrtact(41));
+
+        Scanner sc = new Scanner(System.in);
+        String message = sc.nextLine();
+
+        int key = 41; // Argeed upon beforehand
+        canvas.Inject(key,message);
+        System.out.println(canvas.Exrtact(key));
+
         canvas.display(false);
         canvas.display(true);
         //int lol = canvas.fade('f', 0x25B3AE);
