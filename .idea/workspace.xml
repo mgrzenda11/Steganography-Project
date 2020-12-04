@@ -19,7 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe9d40f9-704f-4670-b14b-7d2e35163b38" name="Default Changelist" comment="wrote the mini class out to generate a &quot;big pixel&quot; image" />
+    <list default="true" id="fe9d40f9-704f-4670-b14b-7d2e35163b38" name="Default Changelist" comment="wrote the mini class out to generate a &quot;big pixel&quot; image">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Steg/Editor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Steg/Editor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Steg/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Steg/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Steg/Mini.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Steg/Mini.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +53,16 @@
           <entry key="JAVA" value="3" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="323" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="323" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
@@ -52,17 +70,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            <state relative-caret-position="153">
+              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Editor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+            <state relative-caret-position="193">
+              <caret line="93" column="9" lean-forward="true" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Mini.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+            <state relative-caret-position="51">
+              <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -91,11 +109,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Mini.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Editor.java" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="54" />
-    <option name="y" value="-11" />
-    <option name="width" value="1313" />
-    <option name="height" value="780" />
+    <option name="x" value="126" />
+    <option name="y" value="101" />
+    <option name="width" value="1311" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectId" id="1kiEmd2mtzgaN9RDeBRLfI2BCCF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -129,8 +156,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1607036052569" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1607046159204" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/MAT_332/Steg" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -216,35 +243,35 @@
     <frame x="54" y="-11" width="1313" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.24980237" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Tool Output" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="ANTLR Preview" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32919255" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="REPL" side_tool="true" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Leiningen" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Tool Output" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Leiningen" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="REPL" order="9" side_tool="true" />
     </layout>
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -284,53 +311,41 @@
     <option name="LAST_COMMIT_MESSAGE" value="wrote the mini class out to generate a &quot;big pixel&quot; image" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1320" height="171" key="GridCell.Tab.0.bottom" timestamp="1606261289152">
-      <screen x="0" y="27" width="1366" height="673" />
-    </state>
-    <state width="1320" height="171" key="GridCell.Tab.0.bottom/0.27.1366.673@0.27.1366.673" timestamp="1606261289152" />
-    <state width="1320" height="171" key="GridCell.Tab.0.center" timestamp="1606261289149">
-      <screen x="0" y="27" width="1366" height="673" />
-    </state>
-    <state width="1320" height="171" key="GridCell.Tab.0.center/0.27.1366.673@0.27.1366.673" timestamp="1606261289149" />
-    <state width="1320" height="171" key="GridCell.Tab.0.left" timestamp="1606261289148">
-      <screen x="0" y="27" width="1366" height="673" />
-    </state>
-    <state width="1320" height="171" key="GridCell.Tab.0.left/0.27.1366.673@0.27.1366.673" timestamp="1606261289148" />
-    <state width="1320" height="171" key="GridCell.Tab.0.right" timestamp="1606261289151">
-      <screen x="0" y="27" width="1366" height="673" />
-    </state>
-    <state width="1320" height="171" key="GridCell.Tab.0.right/0.27.1366.673@0.27.1366.673" timestamp="1606261289151" />
-    <state x="278" y="99" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606256582988">
-      <screen x="0" y="27" width="1366" height="673" />
-    </state>
-    <state x="278" y="99" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1366.673@0.27.1366.673" timestamp="1606256582988" />
-    <state x="0" y="27" width="1356" height="673" key="new project wizard" timestamp="1606256179256">
-      <screen x="0" y="27" width="1366" height="673" />
-    </state>
-    <state x="0" y="27" width="1356" height="673" key="new project wizard/0.27.1366.673@0.27.1366.673" timestamp="1606256179256" />
+    <state width="1320" height="171" key="GridCell.Tab.0.bottom" />
+    <state width="1320" height="171" key="GridCell.Tab.0.bottom/0.27.1366.673@0.27.1366.673" />
+    <state width="1320" height="171" key="GridCell.Tab.0.center" />
+    <state width="1320" height="171" key="GridCell.Tab.0.center/0.27.1366.673@0.27.1366.673" />
+    <state width="1320" height="171" key="GridCell.Tab.0.left" />
+    <state width="1320" height="171" key="GridCell.Tab.0.left/0.27.1366.673@0.27.1366.673" />
+    <state width="1320" height="171" key="GridCell.Tab.0.right" />
+    <state width="1320" height="171" key="GridCell.Tab.0.right/0.27.1366.673@0.27.1366.673" />
+    <state x="278" y="99" width="800" height="535" key="Vcs.Push.Dialog.v2" />
+    <state x="278" y="99" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1366.673@0.27.1366.673" />
+    <state x="0" y="27" width="1356" height="673" key="new project wizard" />
+    <state x="0" y="27" width="1356" height="673" key="new project wizard/0.27.1366.673@0.27.1366.673" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Mini.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="153">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Editor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+        <state relative-caret-position="193">
+          <caret line="93" column="9" lean-forward="true" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Mini.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
         </state>
       </provider>
     </entry>

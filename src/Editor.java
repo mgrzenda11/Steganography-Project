@@ -66,9 +66,9 @@ public class Editor {
         miniDisplay("MiniImage", img);
 
         //saving image
-        File output = new File(System.getProperty("user.home") + "/Pictures/MiniImage.jpg");
+        File output = new File(System.getProperty("user.home") + "/Pictures/MiniImage.png");
         try {
-            ImageIO.write(img, "jpg", output);
+            ImageIO.write(img, "png", output);
         } catch(IOException ioe) {
             System.out.println(ioe.getMessage());
         }
@@ -87,7 +87,17 @@ public class Editor {
             col.add(k);
             i = k % width;
             j = k / width;
+            System.out.print("(" + i + "," + j + ")\t");
+            System.out.print(Integer.toHexString(graphia.getRGB(i,j)) + "\t");
             graphia.setRGB(i, j,fade(c, graphia.getRGB(i,j)));
+            System.out.println(Integer.toHexString(graphia.getRGB(i,j)) + "\t");
+        }
+
+        for(int l = 0; l < width; l++) {
+            for (int m = 0; m < height; m++) {
+                System.out.print(Integer.toHexString(graphia.getRGB(m,l)) + " ");
+            }
+            System.out.println("\n");
         }
     }
 
@@ -184,11 +194,25 @@ public class Editor {
 
     public void save() {
         // System.out.println(System.getProperty("user.home"));
-        File output = new File(System.getProperty("user.home") + "/Pictures/graphia.jpg");
+        File output = new File(System.getProperty("user.home") + "/Pictures/graphia.png");
         try {
-            ImageIO.write(graphia, "jpg", output);
+            ImageIO.write(toBI(graphia.getScaledInstance(500, 500, Image.SCALE_DEFAULT)), "png", output);
         } catch(IOException ioe) {
             System.out.println(ioe.getMessage());
         }
+    }
+
+    public BufferedImage toBI(Image img) {
+        if (img instanceof BufferedImage)
+            return (BufferedImage) img;
+
+        BufferedImage bimage = new BufferedImage(img.getWidth(null), img.getHeight(null),
+                BufferedImage.TYPE_INT_ARGB);
+
+        Graphics2D bGr = bimage.createGraphics();
+        bGr.drawImage(img, 0, 0, null);
+        bGr.dispose();
+
+        return bimage;
     }
 }
