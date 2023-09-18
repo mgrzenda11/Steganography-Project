@@ -26,6 +26,9 @@ public class Editor {
         height = picture.getHeight();
         width = picture.getWidth();
 
+        System.out.println("Image Height: " + height);
+        System.out.println("Image width: " + width);
+
         ColorModel model = picture.getColorModel();
         WritableRaster raster = picture.copyData(null);
         graphia = new BufferedImage(model, raster, model.isAlphaPremultiplied(), null);
@@ -58,8 +61,8 @@ public class Editor {
         for(char c: (message+'\0').toCharArray()) {
             do {
                 primeValue = (int) (Math.pow(prime *primeIndex++, 2)) % bound;
-            } while(col.contains(k));
-            col.add(k);
+            } while(col.contains(primeValue));
+            col.add(primeValue);
 
             xcoord = primeValue % width;
             ycoord = primeValue / width;
@@ -67,12 +70,12 @@ public class Editor {
             graphia.setRGB(xcoord, ycoord, encryptPixel(c, graphia.getRGB(xcoord,ycoord)));
         }
 
-        for(int l = 0; l < width; l++) {
-            for (int m = 0; m < height; m++) {
-                System.out.print(Integer.toHexString(graphia.getRGB(m,l)) + " ");
-            }
-            System.out.println("\n");
-        }
+        // for(int l = 0; l < width; l++) {
+            // for (int m = 0; m < height; m++) {
+                // System.out.print(Integer.toHexString(graphia.getRGB(m,l)) + " ");
+            // }
+            // System.out.println("\n");
+        // }
     }
 
     //----------------------------------------------------------------------------------------------------
@@ -93,11 +96,11 @@ public class Editor {
         StringBuilder message = new StringBuilder();
         char c;
 
-        while(x < bound) {
+        while(primeIndex < bound) {
             do {
                 primeValue = (int) (Math.pow(key * primeIndex++, 2)) % bound;
-            } while(col.contains(k));
-            col.add(k);
+            } while(col.contains(primeValue));
+            col.add(primeValue);
             xcoord = primeValue % width;
             ycoord = primeValue / width;
             c = decryptPixel(graphia.getRGB(xcoord, ycoord));
